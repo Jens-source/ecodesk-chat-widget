@@ -20,7 +20,7 @@ import getThemeConfig from '../theme';
 import store from '../storage';
 import Logger from '../logger';
 
-const DEFAULT_IFRAME_URL = 'https://chat-widget.ecodesk.io';
+const DEFAULT_IFRAME_URL = 'https://admin.ecodesk.io';
 
 export type SharedProps = {
   token: string;
