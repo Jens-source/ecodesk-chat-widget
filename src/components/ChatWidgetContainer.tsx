@@ -13,7 +13,7 @@ import {
   getUserInfo,
   setupCustomEventHandlers,
   setupPostMessageHandlers,
-} from '@ecodesk-io/browser';
+} from '@papercups-io/browser';
 
 import {WidgetConfig, noop} from '../utils';
 import getThemeConfig from '../theme';
