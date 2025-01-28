@@ -1,26 +1,26 @@
-# @papercups-io/chat-widget
+# @ecodesk-io/chat-widget
 
-> Papercups chat widget
+> Ecodesk chat widget
 
-[![NPM](https://img.shields.io/npm/v/@papercups-io/chat-widget.svg)](https://www.npmjs.com/package/@papercups-io/chat-widget)
-[![Downloads](https://img.shields.io/npm/dm/@papercups-io/chat-widget.svg)](https://www.npmjs.com/package/@papercups-io/chat-widget)
+[![NPM](https://img.shields.io/npm/v/@ecodesk-io/chat-widget.svg)](https://www.npmjs.com/package/@ecodesk-io/chat-widget)
+[![Downloads](https://img.shields.io/npm/dm/@ecodesk-io/chat-widget.svg)](https://www.npmjs.com/package/@ecodesk-io/chat-widget)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Demo
 
-Available at https://app.papercups.io/demo
+Available at https://app.ecodesk.io/demo
 
 ![demo](https://user-images.githubusercontent.com/5264279/88118921-e4a37900-cb8c-11ea-825f-86deb8edc518.gif)
 
 ## Install
 
 ```bash
-npm install --save @papercups-io/chat-widget
+npm install --save @ecodesk-io/chat-widget
 ```
 
 ## Usage
 
-First, sign up at https://app.papercups.io/register to get your account token. Your account token is what you will use to pass in as the `accountId` prop below.
+First, sign up at https://app.ecodesk.io/register to get your account token. Your account token is what you will use to pass in as the `accountId` prop below.
 
 ### Using in HTML
 
@@ -28,13 +28,13 @@ Paste the code below between your `<head>` and `</head>` tags:
 
 ```html
 <script>
-  window.Papercups = {
+  window.Ecodesk = {
     config: {
-      // Pass in your Papercups account token here after signing up
+      // Pass in your Ecodesk account token here after signing up
       token: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx',
-      // Specify a Papercups inbox
+      // Specify a Ecodesk inbox
       inbox: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx',
-      title: 'Welcome to Papercups!',
+      title: 'Welcome to Ecodesk!',
       subtitle: 'Ask us anything in the chat window below 😊',
       newMessagePlaceholder: 'Start typing...',
       primaryColor: '#13c2c2',
@@ -48,7 +48,7 @@ Paste the code below between your `<head>` and `</head>` tags:
         metadata: {version: 1, plan: 'premium'}, // Custom fields go here
       },
       // Optionally specify the base URL
-      baseUrl: 'https://app.papercups.io',
+      baseUrl: 'https://app.ecodesk.io',
       // Add this if you want to require the customer to enter
       // their email before being able to send you a message
       requireEmailUpfront: true,
@@ -62,7 +62,7 @@ Paste the code below between your `<head>` and `</head>` tags:
   type="text/javascript"
   async
   defer
-  src="https://app.papercups.io/widget.js"
+  src="https://app.ecodesk.io/widget.js"
 ></script>
 ```
 
@@ -73,18 +73,18 @@ Place the code below in any pages on which you would like to render the widget. 
 ```tsx
 import React from 'react';
 
-import {ChatWidget} from '@papercups-io/chat-widget';
+import {ChatWidget} from '@ecodesk-io/chat-widget';
 
 // You can also import the following in v1.1.0 and above:
-// import {ChatWidget, ChatWindow, Papercups} from '@papercups-io/chat-widget';
+// import {ChatWidget, ChatWindow, Ecodesk} from '@ecodesk-io/chat-widget';
 //
 // The `ChatWindow` component allows you to embed the chat however you want,
-// and the `Papercups` object provides access to functions that can programmatically
+// and the `Ecodesk` object provides access to functions that can programmatically
 // open/close the chat widget, e.g.:
 //
-// `Papercups.open()` // => opens the chat widget
-// `Papercups.close()` // => closes the chat widget
-// `Papercups.toggle()` // => toggles (opens or closes) the chat widget
+// `Ecodesk.open()` // => opens the chat widget
+// `Ecodesk.close()` // => closes the chat widget
+// `Ecodesk.toggle()` // => toggles (opens or closes) the chat widget
 
 const ExamplePage = () => {
   return (
@@ -95,11 +95,11 @@ const ExamplePage = () => {
         if you would like it to render on every page
       */}
       <ChatWidget
-        // Pass in your Papercups account token here after signing up
+        // Pass in your Ecodesk account token here after signing up
         token='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx'
-        // Specify a Papercups inbox
+        // Specify a Ecodesk inbox
         inbox='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx'
-        title='Welcome to Papercups!'
+        title='Welcome to Ecodesk!'
         subtitle='Ask us anything in the chat window below 😊'
         newMessagePlaceholder='Start typing...'
         primaryColor='#13c2c2'
@@ -113,7 +113,7 @@ const ExamplePage = () => {
           metadata: {version: 1, plan: 'premium'}, // Custom fields go here
         }}
         // Optionally specify the base URL
-        baseUrl='https://app.papercups.io'
+        baseUrl='https://app.ecodesk.io'
         // Add this if you want to require the customer to enter
         // their email before being able to send you a message
         requireEmailUpfront
@@ -128,13 +128,13 @@ const ExamplePage = () => {
 
 ## Options
 
-These are the props you can pass into your `<ChatWidget />` React component, or the fields you can specify in your `Papercups.config`:
+These are the props you can pass into your `<ChatWidget />` React component, or the fields you can specify in your `Ecodesk.config`:
 
 | Prop                              | Type                                | Value                                                                                                                      | Default                          |
 | :-------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
-| **`token`**                       | `string`                            | Your Papercups account token                                                                                               | N/A                              |
-| **`inbox`**                       | `string`                            | The Papercups inbox you would like messages to flow into (defaults to your primary inbox)                                  | N/A                              |
-| **`accountId`** (deprecated)      | `string`                            | Your Papercups account token (deprecated: use `token` field instead)                                                       | N/A                              |
+| **`token`**                       | `string`                            | Your Ecodesk account token                                                                                               | N/A                              |
+| **`inbox`**                       | `string`                            | The Ecodesk inbox you would like messages to flow into (defaults to your primary inbox)                                  | N/A                              |
+| **`accountId`** (deprecated)      | `string`                            | Your Ecodesk account token (deprecated: use `token` field instead)                                                       | N/A                              |
 | **`title`**                       | `string`                            | The title in the header of your chat widget                                                                                | Welcome!                         |
 | **`subtitle`**                    | `string`                            | The subtitle in the header of your chat widget                                                                             | How can we help you?             |
 | **`newMessagePlaceholder`**       | `string`                            | The placeholder text in the new message input                                                                              | Start typing...                  |
@@ -147,13 +147,13 @@ These are the props you can pass into your `<ChatWidget />` React component, or 
 | **`agentAvailableText`**          | `string`                            | The text shown when you (or your agents) are online                                                                        | We're online right now!          |
 | **`agentUnavailableText`**        | `string`                            | The text shown when you (and your agents) are offline                                                                      | We're away at the moment.        |
 | **`customer`**                    | `object`                            | Identifying information for the customer, including `name`, `email`, `external_id`, and `metadata` (for any custom fields) | N/A                              |
-| **`baseUrl`**                     | `string`                            | The base URL of your API if you're self-hosting Papercups                                                                  | https://app.papercups.io         |
-| **`iframeUrlOverride`**           | `string`                            | An override of the iframe URL we use to render the chat, if you chose to self-host that as well                            | https://chat-widget.papercups.io |
+| **`baseUrl`**                     | `string`                            | The base URL of your API if you're self-hosting Ecodesk                                                                  | https://app.ecodesk.io         |
+| **`iframeUrlOverride`**           | `string`                            | An override of the iframe URL we use to render the chat, if you chose to self-host that as well                            | https://chat-widget.ecodesk.io |
 | **`requireEmailUpfront`**         | `boolean`                           | If you want to require unidentified customers to provide their email before they can message you                           | `false`                          |
 | **`isOpenByDefault`**             | `boolean`                           | If you want the chat widget to open as soon as it loads                                                                    | `false`                          |
 | **`persistOpenState`**            | `boolean`                           | Persists the open state of the chat across pages                                                                           | `false`                          |
 | **`hideToggleButton`**            | `boolean`                           | Hides the toggle button in case you want to open/close programmatically                                                    | `false`                          |
-| **`hideOutsideWorkingHours`**     | `boolean`                           | Hides the chat widget outside of working hours set in Papercups                                                            | `false`                          |
+| **`hideOutsideWorkingHours`**     | `boolean`                           | Hides the chat widget outside of working hours set in Ecodesk                                                            | `false`                          |
 | **`popUpInitialMessage`**         | `boolean \| number`                 | Pops up the initial greeting after `number` milliseconds (or immediately if `true`)                                        | `false`                          |
 | **`customIconUrl`**               | `string`                            | A link to a custom icon image URL                                                                                          | N/A                              |
 | **`iconVariant`**                 | `'outlined' \| 'filled'`            | The style of the default icon                                                                                              | `outlined`                       |
@@ -186,22 +186,22 @@ This will start a development server on [http://localhost:3000](http://localhost
 
 ### Important notes
 
-By default, the example widget points at development servers for the [Papercups API](https://github.com/papercups-io/papercups) (which runs at http://localhost:4000) and the [Papercups chat window](https://github.com/papercups-io/chat-window) (which runs at http://localhost:8080). These values are set with the [`baseUrl`](https://github.com/papercups-io/chat-widget/blob/master/example/src/App.tsx#L66) and [`iframeUrlOverride`](https://github.com/papercups-io/chat-widget/blob/master/example/src/App.tsx#L67) props respectively.
+By default, the example widget points at development servers for the [Ecodesk API](https://github.com/ecodesk-io/ecodesk) (which runs at http://localhost:4000) and the [Ecodesk chat window](https://github.com/ecodesk-io/chat-window) (which runs at http://localhost:8080). These values are set with the [`baseUrl`](https://github.com/ecodesk-io/chat-widget/blob/master/example/src/App.tsx#L66) and [`iframeUrlOverride`](https://github.com/ecodesk-io/chat-widget/blob/master/example/src/App.tsx#L67) props respectively.
 
 If you want to develop against your account in production, you can update these values to the following:
 
-- `baseUrl: http://app.papercups.io`
-- `iframeUrlOverride: https://chat-widget.papercups.io`
+- `baseUrl: http://app.ecodesk.io`
+- `iframeUrlOverride: https://chat-widget.ecodesk.io`
 
 _(Note that you can also simply remove these props, since the values above are the defaults.)_
 
-You'll also want to update your account token to point to your own account. If you haven't already, create a free account at https://app.papercups.io/register to get started.
+You'll also want to update your account token to point to your own account. If you haven't already, create a free account at https://app.ecodesk.io/register to get started.
 
-Once you have your account token, update the [`accountId`](https://github.com/papercups-io/chat-widget/blob/master/example/src/App.tsx#L46) prop to point at yours.
+Once you have your account token, update the [`accountId`](https://github.com/ecodesk-io/chat-widget/blob/master/example/src/App.tsx#L46) prop to point at yours.
 
 ## Questions?
 
-If you're having any trouble getting started or just want to say hi, join us on [Slack](https://join.slack.com/t/papercups-io/shared_invite/zt-h0c3fxmd-hZi1Zp8~D61S6GD16aMqmg)! :wave:
+If you're having any trouble getting started or just want to say hi, join us on [Slack](https://join.slack.com/t/ecodesk-io/shared_invite/zt-h0c3fxmd-hZi1Zp8~D61S6GD16aMqmg)! :wave:
 
 ### Submitting a PR
 
@@ -211,4 +211,4 @@ When creating a pull request, be sure to include a screenshot! 🎨
 
 ## License
 
-MIT © Papercups
+MIT © Ecodesk
